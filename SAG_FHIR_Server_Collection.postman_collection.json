@@ -348,6 +348,16 @@
 		"type": "oauth2",
 		"oauth2": [
 			{
+				"key": "accessTokenUrl",
+				"value": "{{oauth_token_url}}",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{oauth_authorize_url}}",
+				"type": "string"
+			},
+			{
 				"key": "redirect_uri",
 				"value": "{{call_back_url}}",
 				"type": "string"
@@ -360,16 +370,6 @@
 			{
 				"key": "clientId",
 				"value": "{{oauth_clientid}}",
-				"type": "string"
-			},
-			{
-				"key": "accessTokenUrl",
-				"value": "{{oauth_token}}",
-				"type": "string"
-			},
-			{
-				"key": "authUrl",
-				"value": "{{oauth_authorize}}",
 				"type": "string"
 			},
 			{
@@ -426,12 +426,12 @@
 	],
 	"variable": [
 		{
-			"key": "oauth_token",
+			"key": "oauth_token_url",
 			"value": "https://dev-911236.okta.com/oauth2/aus1ae2el7M1XPwS34x7/v1/token",
 			"type": "string"
 		},
 		{
-			"key": "oauth_authorize",
+			"key": "Oauth_authorize_url",
 			"value": "https://dev-911236.okta.com/oauth2/aus1ae2el7M1XPwS34x7/v1/authorize",
 			"type": "string"
 		},
