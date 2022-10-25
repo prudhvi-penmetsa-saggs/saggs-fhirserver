@@ -1,0 +1,77 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "kms:GetPublicKey",
+                "dynamodb:DescribeContributorInsights",
+                "dynamodb:RestoreTableToPointInTime",
+                "dynamodb:UpdateGlobalTable",
+                "dynamodb:DeleteTable",
+                "dynamodb:UpdateTableReplicaAutoScaling",
+                "dynamodb:DescribeTable",
+                "kms:GetKeyRotationStatus",
+                "dynamodb:PartiQLInsert",
+                "dynamodb:GetItem",
+                "dynamodb:DescribeContinuousBackups",
+                "dynamodb:DescribeExport",
+                "dynamodb:EnableKinesisStreamingDestination",
+                "dynamodb:BatchGetItem",
+                "dynamodb:DisableKinesisStreamingDestination",
+                "dynamodb:UpdateTimeToLive",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:PartiQLUpdate",
+                "dynamodb:Scan",
+                "dynamodb:UpdateItem",
+                "dynamodb:CreateTable",
+                "dynamodb:UpdateGlobalTableSettings",
+                "dynamodb:GetShardIterator",
+                "dynamodb:ExportTableToPointInTime",
+                "dynamodb:DescribeBackup",
+                "dynamodb:UpdateTable",
+                "dynamodb:GetRecords",
+                "dynamodb:DescribeTableReplicaAutoScaling",
+                "dynamodb:DeleteItem",
+                "dynamodb:ListTagsOfResource",
+                "dynamodb:CreateTableReplica",
+                "dynamodb:UpdateContributorInsights",
+                "dynamodb:CreateBackup",
+                "dynamodb:UpdateContinuousBackups",
+                "kms:GetParametersForImport",
+                "dynamodb:TagResource",
+                "dynamodb:PartiQLSelect",
+                "kms:DescribeKey",
+                "dynamodb:CreateGlobalTable",
+                "dynamodb:DescribeKinesisStreamingDestination",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:UntagResource",
+                "kms:GetKeyPolicy",
+                "dynamodb:Query",
+                "dynamodb:DescribeStream",
+                "dynamodb:DeleteTableReplica",
+                "dynamodb:DescribeTimeToLive",
+                "dynamodb:DescribeGlobalTableSettings",
+                "dynamodb:DescribeGlobalTable",
+                "dynamodb:RestoreTableFromBackup",
+                "dynamodb:DeleteBackup",
+                "dynamodb:PartiQLDelete"
+            ],
+            "Resource": [
+                "arn:aws:dynamodb:us-east-1:1234567890:table/fhir-resource-db",
+                "arn:aws:kms:us-east-1:1234567890:key/1234567890-79c3-4aa1-b164-f7e469f9b5b2"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "kms:DescribeCustomKeyStores",
+                "dynamodb:ListTables"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
