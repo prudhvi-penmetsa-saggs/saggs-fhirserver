@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "d5e20ab9-f485-4de4-91c9-cbd104a20e83",
+		"name": "SAG_FHIR_Server_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2498950"
+	},
+	"item": [
+		{
+			"name": "CreateNewPatient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/fhir+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"birthDate\": \"1956-09-24\",\n    \"meta\": {\n        \"lastUpdated\": \"2021-08-11T21:16:04.668Z\",\n        \"versionId\": \"1\"\n    },\n    \"managingOrganization\": {\n        \"reference\": \"Organization/2.16.840.1.113883.19.5\",\n        \"display\": \"Good Health Clinic\"\n    },\n    \"text\": {\n        \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p></p></div>\",\n        \"status\": \"generated\"\n    },\n    \"name\": [\n        {\n            \"family\": \"Pemetsa\",\n            \"given\": [\n                \"Prudhvi\",\n                \"Raju\"\n            ]\n        },\n        {\n            \"family\": \"Indukuri\",\n            \"given\": [\n                \"Pavani\",\n                \"Rani\"\n            ]\n        }\n    ],\n    \"gender\": \"male\",\n    \"active\": true,\n    \"resourceType\": \"Patient\"\n}"
+				},
+				"url": {
+					"raw": "{{fhir_server_url}}/Patient?_summary=false&_pretty=true&_elements=deserunt magna pariatur",
+					"host": [
+						"{{fhir_server_url}}"
+					],
+					"path": [
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "_summary",
+							"value": "false",
+							"description": "Requests the server to return a designated subset of the resource"
+						},
+						{
+							"key": "_pretty",
+							"value": "true",
+							"description": "Ask for a pretty printed response for human convenience"
+						},
+						{
+							"key": "_elements",
+							"value": "deserunt magna pariatur",
+							"description": "Requests the server to return a collection of elements from the resource"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "the resource being returned after being updated",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-Gateway-APIKey",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"_language\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"extension\": [\n        {\n            \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n        }\n    ],\n    \"gender\": \"female\",\n    \"modifierExtension\": [\n        {\n            \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n        }\n    ],\n    \"link\": [\n        {\n            \"value\": \"reference #/definitions/Patient_Link not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Patient_Link not found in the OpenAPI spec\"\n        }\n    ],\n    \"language\": {\n        \"value\": \"reference #/definitions/code not found in the OpenAPI spec\"\n    },\n    \"_deceasedDateTime\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"_multipleBirthInteger\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"_gender\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"contact\": [\n        {\n            \"value\": \"reference #/definitions/Patient_Contact not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Patient_Contact not found in the OpenAPI spec\"\n        }\n    ],\n    \"deceasedDateTime\": \"1000-04-07T23:12:60.5609884629Z\",\n    \"generalPractitioner\": [\n        {\n            \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n        }\n    ],\n    \"telecom\": [\n        {\n            \"value\": \"reference #/definitions/ContactPoint not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/ContactPoint not found in the OpenAPI spec\"\n        }\n    ],\n    \"id\": {\n        \"value\": \"reference #/definitions/id not found in the OpenAPI spec\"\n    },\n    \"text\": {\n        \"value\": \"reference #/definitions/Narrative not found in the OpenAPI spec\"\n    },\n    \"communication\": [\n        {\n            \"value\": \"reference #/definitions/Patient_Communication not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Patient_Communication not found in the OpenAPI spec\"\n        }\n    ],\n    \"_deceasedBoolean\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"identifier\": [\n        {\n            \"value\": \"reference #/definitions/Identifier not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Identifier not found in the OpenAPI spec\"\n        }\n    ],\n    \"address\": [\n        {\n            \"value\": \"reference #/definitions/Address not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Address not found in the OpenAPI spec\"\n        }\n    ],\n    \"multipleBirthBoolean\": true,\n    \"active\": {\n        \"value\": \"reference #/definitions/boolean not found in the OpenAPI spec\"\n    },\n    \"photo\": [\n        {\n            \"value\": \"reference #/definitions/Attachment not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Attachment not found in the OpenAPI spec\"\n        }\n    ],\n    \"_implicitRules\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"birthDate\": {\n        \"value\": \"reference #/definitions/date not found in the OpenAPI spec\"\n    },\n    \"_birthDate\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"contained\": [\n        {\n            \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n        }\n    ],\n    \"deceasedBoolean\": true,\n    \"managingOrganization\": {\n        \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n    },\n    \"meta\": {\n        \"value\": \"reference #/definitions/Meta not found in the OpenAPI spec\"\n    },\n    \"multipleBirthInteger\": 84721542,\n    \"name\": [\n        {\n            \"value\": \"reference #/definitions/HumanName not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/HumanName not found in the OpenAPI spec\"\n        }\n    ],\n    \"implicitRules\": {\n        \"value\": \"reference #/definitions/uri not found in the OpenAPI spec\"\n    },\n    \"_active\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"_multipleBirthBoolean\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"maritalStatus\": {\n        \"value\": \"reference #/definitions/CodeableConcept not found in the OpenAPI spec\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Patient?_summary=false&_pretty=true&_elements=deserunt magna pariatur",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "_summary",
+									"value": "false"
+								},
+								{
+									"key": "_pretty",
+									"value": "true"
+								},
+								{
+									"key": "_elements",
+									"value": "deserunt magna pariatur"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/fhir+json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"resourceType\": \"Patient\",\n \"_language\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"extension\": [\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  }\n ],\n \"gender\": \"female\",\n \"modifierExtension\": [\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  }\n ],\n \"link\": [\n  {\n   \"value\": \"reference #/definitions/Patient_Link not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Patient_Link not found in the OpenAPI spec\"\n  }\n ],\n \"language\": {\n  \"value\": \"reference #/definitions/code not found in the OpenAPI spec\"\n },\n \"_deceasedDateTime\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"_multipleBirthInteger\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"_gender\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"contact\": [\n  {\n   \"value\": \"reference #/definitions/Patient_Contact not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Patient_Contact not found in the OpenAPI spec\"\n  }\n ],\n \"deceasedDateTime\": \"1000-04-07T23:12:60.5609884629Z\",\n \"generalPractitioner\": [\n  {\n   \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n  }\n ],\n \"telecom\": [\n  {\n   \"value\": \"reference #/definitions/ContactPoint not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/ContactPoint not found in the OpenAPI spec\"\n  }\n ],\n \"id\": {\n  \"value\": \"reference #/definitions/id not found in the OpenAPI spec\"\n },\n \"text\": {\n  \"value\": \"reference #/definitions/Narrative not found in the OpenAPI spec\"\n },\n \"communication\": [\n  {\n   \"value\": \"reference #/definitions/Patient_Communication not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Patient_Communication not found in the OpenAPI spec\"\n  }\n ],\n \"_deceasedBoolean\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"identifier\": [\n  {\n   \"value\": \"reference #/definitions/Identifier not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Identifier not found in the OpenAPI spec\"\n  }\n ],\n \"address\": [\n  {\n   \"value\": \"reference #/definitions/Address not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Address not found in the OpenAPI spec\"\n  }\n ],\n \"multipleBirthBoolean\": true,\n \"active\": {\n  \"value\": \"reference #/definitions/boolean not found in the OpenAPI spec\"\n },\n \"photo\": [\n  {\n   \"value\": \"reference #/definitions/Attachment not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Attachment not found in the OpenAPI spec\"\n  }\n ],\n \"_implicitRules\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"birthDate\": {\n  \"value\": \"reference #/definitions/date not found in the OpenAPI spec\"\n },\n \"_birthDate\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"contained\": [\n  {\n   \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n  }\n ],\n \"deceasedBoolean\": true,\n \"managingOrganization\": {\n  \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n },\n \"meta\": {\n  \"value\": \"reference #/definitions/Meta not found in the OpenAPI spec\"\n },\n \"multipleBirthInteger\": 84721542,\n \"name\": [\n  {\n   \"value\": \"reference #/definitions/HumanName not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/HumanName not found in the OpenAPI spec\"\n  }\n ],\n \"implicitRules\": {\n  \"value\": \"reference #/definitions/uri not found in the OpenAPI spec\"\n },\n \"_active\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"_multipleBirthBoolean\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"maritalStatus\": {\n  \"value\": \"reference #/definitions/CodeableConcept not found in the OpenAPI spec\"\n }\n}"
+				},
+				{
+					"name": "Error, with details",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-Gateway-APIKey",
+								"value": "<API Key>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"_language\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"extension\": [\n        {\n            \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n        }\n    ],\n    \"gender\": \"female\",\n    \"modifierExtension\": [\n        {\n            \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n        }\n    ],\n    \"link\": [\n        {\n            \"value\": \"reference #/definitions/Patient_Link not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Patient_Link not found in the OpenAPI spec\"\n        }\n    ],\n    \"language\": {\n        \"value\": \"reference #/definitions/code not found in the OpenAPI spec\"\n    },\n    \"_deceasedDateTime\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"_multipleBirthInteger\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"_gender\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"contact\": [\n        {\n            \"value\": \"reference #/definitions/Patient_Contact not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Patient_Contact not found in the OpenAPI spec\"\n        }\n    ],\n    \"deceasedDateTime\": \"1000-04-07T23:12:60.5609884629Z\",\n    \"generalPractitioner\": [\n        {\n            \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n        }\n    ],\n    \"telecom\": [\n        {\n            \"value\": \"reference #/definitions/ContactPoint not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/ContactPoint not found in the OpenAPI spec\"\n        }\n    ],\n    \"id\": {\n        \"value\": \"reference #/definitions/id not found in the OpenAPI spec\"\n    },\n    \"text\": {\n        \"value\": \"reference #/definitions/Narrative not found in the OpenAPI spec\"\n    },\n    \"communication\": [\n        {\n            \"value\": \"reference #/definitions/Patient_Communication not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Patient_Communication not found in the OpenAPI spec\"\n        }\n    ],\n    \"_deceasedBoolean\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"identifier\": [\n        {\n            \"value\": \"reference #/definitions/Identifier not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Identifier not found in the OpenAPI spec\"\n        }\n    ],\n    \"address\": [\n        {\n            \"value\": \"reference #/definitions/Address not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Address not found in the OpenAPI spec\"\n        }\n    ],\n    \"multipleBirthBoolean\": true,\n    \"active\": {\n        \"value\": \"reference #/definitions/boolean not found in the OpenAPI spec\"\n    },\n    \"photo\": [\n        {\n            \"value\": \"reference #/definitions/Attachment not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/Attachment not found in the OpenAPI spec\"\n        }\n    ],\n    \"_implicitRules\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"birthDate\": {\n        \"value\": \"reference #/definitions/date not found in the OpenAPI spec\"\n    },\n    \"_birthDate\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"contained\": [\n        {\n            \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n        }\n    ],\n    \"deceasedBoolean\": true,\n    \"managingOrganization\": {\n        \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n    },\n    \"meta\": {\n        \"value\": \"reference #/definitions/Meta not found in the OpenAPI spec\"\n    },\n    \"multipleBirthInteger\": 84721542,\n    \"name\": [\n        {\n            \"value\": \"reference #/definitions/HumanName not found in the OpenAPI spec\"\n        },\n        {\n            \"value\": \"reference #/definitions/HumanName not found in the OpenAPI spec\"\n        }\n    ],\n    \"implicitRules\": {\n        \"value\": \"reference #/definitions/uri not found in the OpenAPI spec\"\n    },\n    \"_active\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"_multipleBirthBoolean\": {\n        \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n    },\n    \"maritalStatus\": {\n        \"value\": \"reference #/definitions/CodeableConcept not found in the OpenAPI spec\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Patient?_summary=false&_pretty=true&_elements=deserunt magna pariatur",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "_summary",
+									"value": "false"
+								},
+								{
+									"key": "_pretty",
+									"value": "true"
+								},
+								{
+									"key": "_elements",
+									"value": "deserunt magna pariatur"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/fhir+json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"issue\": [\n  {\n   \"value\": \"reference #/definitions/OperationOutcome_Issue not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/OperationOutcome_Issue not found in the OpenAPI spec\"\n  }\n ],\n \"resourceType\": \"OperationOutcome\",\n \"_language\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"contained\": [\n  {\n   \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n  }\n ],\n \"extension\": [\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  }\n ],\n \"meta\": {\n  \"value\": \"reference #/definitions/Meta not found in the OpenAPI spec\"\n },\n \"modifierExtension\": [\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  }\n ],\n \"implicitRules\": {\n  \"value\": \"reference #/definitions/uri not found in the OpenAPI spec\"\n },\n \"_implicitRules\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"language\": {\n  \"value\": \"reference #/definitions/code not found in the OpenAPI spec\"\n },\n \"id\": {\n  \"value\": \"reference #/definitions/id not found in the OpenAPI spec\"\n },\n \"text\": {\n  \"value\": \"reference #/definitions/Narrative not found in the OpenAPI spec\"\n }\n}"
+				}
+			]
+		},
+		{
+			"name": "readPatient",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "6e8978bd-4614-4bf0-bbc6-2d6f53df8195",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-Gateway-APIKey",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/fhir+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/fhir+json",
+						"type": "text"
+					},
+					{
+						"key": "x-Gateway-APIKey",
+						"value": "6e8978bd-4614-4bf0-bbc6-2d6f53df8195",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{fhir_server_url}}/Patient/:rid?_summary=false&_pretty=true&_elements=id",
+					"host": [
+						"{{fhir_server_url}}"
+					],
+					"path": [
+						"Patient",
+						":rid"
+					],
+					"query": [
+						{
+							"key": "_summary",
+							"value": "false",
+							"description": "Requests the server to return a designated subset of the resource"
+						},
+						{
+							"key": "_pretty",
+							"value": "true",
+							"description": "Ask for a pretty printed response for human convenience"
+						},
+						{
+							"key": "_elements",
+							"value": "id",
+							"description": "Requests the server to return a collection of elements from the resource"
+						}
+					],
+					"variable": [
+						{
+							"key": "rid",
+							"value": "93e07131-c7fe-494d-b92d-8c6368d79c8c",
+							"description": "(Required) id of the resource (=Resource.id)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "the resource being returned",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-Gateway-APIKey",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Patient/:rid?_summary=false&_pretty=true&_elements=deserunt magna pariatur",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Patient",
+								":rid"
+							],
+							"query": [
+								{
+									"key": "_summary",
+									"value": "false"
+								},
+								{
+									"key": "_pretty",
+									"value": "true"
+								},
+								{
+									"key": "_elements",
+									"value": "deserunt magna pariatur"
+								}
+							],
+							"variable": [
+								{
+									"key": "rid"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/fhir+json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"resourceType\": \"Patient\",\n \"_language\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"extension\": [\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  }\n ],\n \"gender\": \"female\",\n \"modifierExtension\": [\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  }\n ],\n \"link\": [\n  {\n   \"value\": \"reference #/definitions/Patient_Link not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Patient_Link not found in the OpenAPI spec\"\n  }\n ],\n \"language\": {\n  \"value\": \"reference #/definitions/code not found in the OpenAPI spec\"\n },\n \"_deceasedDateTime\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"_multipleBirthInteger\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"_gender\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"contact\": [\n  {\n   \"value\": \"reference #/definitions/Patient_Contact not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Patient_Contact not found in the OpenAPI spec\"\n  }\n ],\n \"deceasedDateTime\": \"1000-04-07T23:12:60.5609884629Z\",\n \"generalPractitioner\": [\n  {\n   \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n  }\n ],\n \"telecom\": [\n  {\n   \"value\": \"reference #/definitions/ContactPoint not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/ContactPoint not found in the OpenAPI spec\"\n  }\n ],\n \"id\": {\n  \"value\": \"reference #/definitions/id not found in the OpenAPI spec\"\n },\n \"text\": {\n  \"value\": \"reference #/definitions/Narrative not found in the OpenAPI spec\"\n },\n \"communication\": [\n  {\n   \"value\": \"reference #/definitions/Patient_Communication not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Patient_Communication not found in the OpenAPI spec\"\n  }\n ],\n \"_deceasedBoolean\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"identifier\": [\n  {\n   \"value\": \"reference #/definitions/Identifier not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Identifier not found in the OpenAPI spec\"\n  }\n ],\n \"address\": [\n  {\n   \"value\": \"reference #/definitions/Address not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Address not found in the OpenAPI spec\"\n  }\n ],\n \"multipleBirthBoolean\": true,\n \"active\": {\n  \"value\": \"reference #/definitions/boolean not found in the OpenAPI spec\"\n },\n \"photo\": [\n  {\n   \"value\": \"reference #/definitions/Attachment not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Attachment not found in the OpenAPI spec\"\n  }\n ],\n \"_implicitRules\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"birthDate\": {\n  \"value\": \"reference #/definitions/date not found in the OpenAPI spec\"\n },\n \"_birthDate\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"contained\": [\n  {\n   \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n  }\n ],\n \"deceasedBoolean\": true,\n \"managingOrganization\": {\n  \"value\": \"reference #/definitions/Reference not found in the OpenAPI spec\"\n },\n \"meta\": {\n  \"value\": \"reference #/definitions/Meta not found in the OpenAPI spec\"\n },\n \"multipleBirthInteger\": 84721542,\n \"name\": [\n  {\n   \"value\": \"reference #/definitions/HumanName not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/HumanName not found in the OpenAPI spec\"\n  }\n ],\n \"implicitRules\": {\n  \"value\": \"reference #/definitions/uri not found in the OpenAPI spec\"\n },\n \"_active\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"_multipleBirthBoolean\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"maritalStatus\": {\n  \"value\": \"reference #/definitions/CodeableConcept not found in the OpenAPI spec\"\n }\n}"
+				},
+				{
+					"name": "Error, with details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-Gateway-APIKey",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Patient/:rid?_summary=false&_pretty=true&_elements=deserunt magna pariatur",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Patient",
+								":rid"
+							],
+							"query": [
+								{
+									"key": "_summary",
+									"value": "false"
+								},
+								{
+									"key": "_pretty",
+									"value": "true"
+								},
+								{
+									"key": "_elements",
+									"value": "deserunt magna pariatur"
+								}
+							],
+							"variable": [
+								{
+									"key": "rid"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/fhir+json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"issue\": [\n  {\n   \"value\": \"reference #/definitions/OperationOutcome_Issue not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/OperationOutcome_Issue not found in the OpenAPI spec\"\n  }\n ],\n \"resourceType\": \"OperationOutcome\",\n \"_language\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"contained\": [\n  {\n   \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/ResourceList not found in the OpenAPI spec\"\n  }\n ],\n \"extension\": [\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  }\n ],\n \"meta\": {\n  \"value\": \"reference #/definitions/Meta not found in the OpenAPI spec\"\n },\n \"modifierExtension\": [\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  },\n  {\n   \"value\": \"reference #/definitions/Extension not found in the OpenAPI spec\"\n  }\n ],\n \"implicitRules\": {\n  \"value\": \"reference #/definitions/uri not found in the OpenAPI spec\"\n },\n \"_implicitRules\": {\n  \"value\": \"reference #/definitions/Element not found in the OpenAPI spec\"\n },\n \"language\": {\n  \"value\": \"reference #/definitions/code not found in the OpenAPI spec\"\n },\n \"id\": {\n  \"value\": \"reference #/definitions/id not found in the OpenAPI spec\"\n },\n \"text\": {\n  \"value\": \"reference #/definitions/Narrative not found in the OpenAPI spec\"\n }\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "redirect_uri",
+				"value": "{{call_back_url}}",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "{{scope}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{oauth_clientid}}",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{oauth_token}}",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{oauth_authorize}}",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "SAG_FHIR_AUTH_TOKEN",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "state",
+				"value": "abc",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code_with_pkce",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "body",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "oauth_token",
+			"value": "https://dev-911236.okta.com/oauth2/aus1ae2el7M1XPwS34x7/v1/token",
+			"type": "string"
+		},
+		{
+			"key": "oauth_authorize",
+			"value": "https://dev-911236.okta.com/oauth2/aus1ae2el7M1XPwS34x7/v1/authorize",
+			"type": "string"
+		},
+		{
+			"key": "oauth_clientid",
+			"value": "0oa2nxc8dowTYURxX4x7",
+			"type": "string"
+		},
+		{
+			"key": "call_back_url",
+			"value": "https://oauth.pstmn.io/v1/callback",
+			"type": "string"
+		},
+		{
+			"key": "scope",
+			"value": "fhir/full.search fhir/patient.read fhir/patient.write openid",
+			"type": "string"
+		},
+		{
+			"key": "fhir_server_url",
+			"value": "http://wmlinux.softwareag-gs.com:5556/gateway/SAG_FHIR_STU4/3.1.1",
+			"type": "string"
+		}
+	]
+}
