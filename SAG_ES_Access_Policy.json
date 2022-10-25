@@ -1,0 +1,56 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "es:DeleteOutboundConnection",
+                "es:DeletePackage",
+                "es:ListElasticsearchInstanceTypeDetails",
+                "es:ListDomainsForPackage",
+                "es:ListInstanceTypeDetails",
+                "es:AcceptInboundConnection",
+                "es:DeleteElasticsearchServiceRole",
+                "es:DescribeInboundConnections",
+                "es:DescribeOutboundConnections",
+                "es:DescribeReservedInstances",
+                "es:AcceptInboundCrossClusterSearchConnection",
+                "es:DescribeReservedInstanceOfferings",
+                "es:DescribeInstanceTypeLimits",
+                "es:DeleteInboundCrossClusterSearchConnection",
+                "es:DescribeOutboundCrossClusterSearchConnections",
+                "es:DeleteOutboundCrossClusterSearchConnection",
+                "es:DescribeReservedElasticsearchInstanceOfferings",
+                "es:CreateServiceRole",
+                "es:CreateElasticsearchServiceRole",
+                "es:UpdatePackage",
+                "es:RejectInboundCrossClusterSearchConnection",
+                "es:DeleteInboundConnection",
+                "es:GetPackageVersionHistory",
+                "es:RejectInboundConnection",
+                "es:PurchaseReservedElasticsearchInstanceOffering",
+                "es:DescribeInboundCrossClusterSearchConnections",
+                "es:ListVersions",
+                "es:DescribeReservedElasticsearchInstances",
+                "es:ListDomainNames",
+                "es:PurchaseReservedInstanceOffering",
+                "es:CreatePackage",
+                "es:DescribePackages",
+                "es:ListElasticsearchInstanceTypes",
+                "es:ListElasticsearchVersions",
+                "es:DescribeElasticsearchInstanceTypeLimits"
+            ],
+            "Resource": [
+                "arn:aws:es:us-east-1:12345677:domain/sag-fhi-elasti-69ekyobt9bkn",
+                "arn:aws:kms:us-east-1:1234567890:key/1234567890-79c3-4aa1-b164-f7e469f9b5b2"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "es:*",
+            "Resource": "arn:aws:es:us-east-1:12345677:domain/sag-fhi-elasti-69ekyobt9bkn"
+        }
+    ]
+}
